@@ -65,19 +65,18 @@ namespace MapleCooldown
             {
                 //Console.WriteLine("X: {0}, Y: {1}", picture.Location.X.ToString(), picture.Location.Y.ToString());
                 var cd = s.cooldownRemaining;
-                if (cd <= 0)
-                {
-                    picture.Visible = false;
-                }
-                else
-                    picture.Visible = true;
+
+                picture.Visible = cd <= 0;
 
                 e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
 
                 string text = "";
-                if (cd <= 0.0f) text = "";
-                else if (cd <= 5.1f && cd > 0.0f) { text = Math.Round(cd, 1, MidpointRounding.AwayFromZero).ToString(); }
-                else { text = Math.Ceiling(cd).ToString(); }
+                if (cd <= 0.0f) 
+                    text = "";
+                else if (cd <= 5.1f && cd > 0.0f) 
+                    text = Math.Round(cd, 1, MidpointRounding.AwayFromZero).ToString(); 
+                else 
+                    text = Math.Ceiling(cd).ToString();
 
                 var font = new Font(_fontFamily, _fontSize / 2, FontStyle.Regular);
                 SizeF textSize = e.Graphics.MeasureString(text, font);
@@ -149,14 +148,9 @@ namespace MapleCooldown
 
                         picBox.Refresh();
 
-                        var cd = skillAssociated.cooldownRemaining;
+                        var cdRemain = skillAssociated.cooldownRemaining;
+                        picBox.Visible = cdRemain <= 0 || skillAssociated.isOnCooldown == false;
 
-                        if (cd <= 0 || skillAssociated.isOnCooldown == false)
-                        {
-                            picBox.Visible = false;
-                        }
-                        else
-                            picBox.Visible = true;
                     }
                     TopMost = true;
                 });

@@ -28,7 +28,6 @@ namespace MapleCooldown
 
         public static void ReadAppConfigJson()
         {
-
             try
             {
                 var mypath = Path.Combine(Environment.CurrentDirectory, "app.config.json");
