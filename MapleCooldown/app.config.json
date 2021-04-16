@@ -1,0 +1,25 @@
+﻿{
+	"skills": 
+	[
+		{
+			"iconPath": ".\\ico\\icon1.png",
+			"cooldownSeconds": 7,
+			"keyboardKey": "Q"
+		},
+		{
+			"iconPath": ".\\ico\\icon2.png",
+			"cooldownSeconds": 7,
+			"keyboardKey": "W"
+		},
+		{
+			"iconPath": ".\\ico\\icon3.png",
+			"cooldownSeconds": 7,
+			"keyboardKey": "E"
+		},
+		{
+			"iconPath": ".\\ico\\icon4.png",
+			"cooldownSeconds": 7,
+			"keyboardKey": "R"
+		}
+	]
+}

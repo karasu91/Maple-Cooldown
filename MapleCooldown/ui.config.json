@@ -1,0 +1,10 @@
+﻿{
+	"UI": 
+	{
+		"imageSize": 48,
+		"windowPosX": 1280,
+		"windowPosY": 1080,
+		"fontSize": 30,
+		"resetKey": "Escape"
+	}
+}
